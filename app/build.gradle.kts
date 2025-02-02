@@ -2,16 +2,19 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    id("dagger.hilt.android.plugin")
+    id("kotlin-android")
+    id("kotlin-kapt")
 }
 
 android {
     namespace = "kadyrbek.travel"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "kadyrbek.travel"
         minSdk = 24
-        targetSdk = 34
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
 
@@ -56,4 +59,31 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+
+    // Основная библиотека Hilt
+    implementation(libs.hilt.android)
+    kapt(libs.hilt.android.compiler)
+    // Hilt для Jetpack Compose
+    implementation (libs.androidx.hilt.navigation.compose)
+
+    // Для работы с ViewModel в Compose
+    implementation (libs.androidx.lifecycle.viewmodel.compose)
+
+    // Google Fonts
+    implementation(libs.androidx.ui.text.google.fonts)
+    //
+    implementation(libs.androidx.material.icons.extended)
+    implementation(libs.ui)
+    // Jetpack Compose Navigation
+    implementation(libs.androidx.navigation.compose.v286)
+    // room
+    implementation(libs.androidx.room.runtime)
+    kapt(libs.androidx.room.compiler)
+    implementation(libs.androidx.room.ktx)
+    // swiperefresh
+    implementation(libs.accompanist.swiperefresh)
+
+
+
+
 }

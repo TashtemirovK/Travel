@@ -3,45 +3,23 @@ package kadyrbek.travel
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import kadyrbek.travel.ui.theme.TravelTheme
+import androidx.compose.material3.MaterialTheme
+import androidx.navigation.compose.rememberNavController
+import dagger.hilt.android.AndroidEntryPoint
+import kadyrbek.travel.navigation.SetupNavHost
+import kadyrbek.travel.presentation.ui.screens.MainScreen
+import kadyrbek.travel.presentation.ui.screens.SplashScreenBounceOnlyContent
+import kadyrbek.travel.presentation.view_model.MainViewModel
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-
-//            TravelTheme {
-//                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-//                    Greeting(
-//                        name = "Android",
-//                        modifier = Modifier.padding(innerPadding)
-//                    )
-//                }
-//            }
+            MaterialTheme {
+                val navController = rememberNavController()
+                SetupNavHost(navController = navController)
+            }
         }
-    }
-}
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    TravelTheme {
-        Greeting("Android")
     }
 }

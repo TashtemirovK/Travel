@@ -1,3 +1,44 @@
 <resources>
     <string name="app_name">Travel</string>
+    // strings for tab
+
+    <string name="Main">Главная</string>
+    <string name="Favorite">Избранное</string>
+    <string name="Profile">Профиль</string>
+    <string name="Price">Цена</string>
+    <string name="place_description">
+        Этот огромный горный хребет славится своим замечательным разнообразием в плане топографии и климата.
+        Он отличается возвышающимися вершинами, действующими вулканами, глубокими каньонами,
+        обширными плато и пышными долинами. Анды также являются домом для...
+    </string>
+    <string name="profile">Профиль</string>
+    <string name="login_regis">Вход / Регистрация</string>
+    <string name="language">Язык</string>
+    <string name="support">Служба поддержки</string>
+    <string name="legal_information">Правовая информация</string>
+    <string name="location">Место</string>
+    <string name="arraw_back">Назад</string>
+    <string name="save">Сохранить</string>
+    <string name="lake_son_kol">Lake Son-Kol</string>
+    <string name="price">Цена</string>
+    <string name="locationn">Локация</string>
+    <string name="naryn_kyrgyzstan">Naryn, Kyrgyzstan</string>
+    <string name="_230">$230</string>
+    <string name="details">Подробности</string>
+    <string name="review">Обзор</string>
+    <string name="_8">8 часов</string>
+    <string name="_16_c">16°C</string>
+    <string name="_4_5">4.5</string>
+    <string name="booking_now">Забронировать сейчас</string>
+    <string name="booking_icon">Иконка бронирования</string>
+    <string name="explore_the_world">Исследуйте мир</string>
+    <string name="search_places">Поиск мест</string>
+    <string name="filter">Фильтр</string>
+    <string name="popular_places">Популярные места</string>
+    <string name="text_favorite">Избранное</string>
+    <string name="rating">Рейтинг</string>
+    <string name="logout">Выйти</string>
+    <string name="find_dream_place">Найдите место своей\nмечты вместе с нами</string>
+    <string name="hello_aibek">Привет, Айбек</string>
+    <string name="ava">Аватар</string>
 </resources>
